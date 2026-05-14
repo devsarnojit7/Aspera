@@ -277,7 +277,7 @@ h1 {
 <div class="page">
 
   <div class="header">
-    <div class="stamp">SRES — SOLARIS ROCKETRY & EXPLORATION SOCIETY // DOCUMENT REV 0.1</div>
+    <div class="stamp">SRES — SOLARIS ROCKETRY & EXPLORATION SOCIETY // DOCUMENT REV 0.2 — CORRECTED</div>
     <h1>UNIVERSAL STATIC TEST STAND</h1>
     <div class="sub">HORIZONTAL · 5,000 N RATED · SOLID & HYBRID COMPATIBLE · REMOTE OPERATION</div>
   </div>
@@ -287,9 +287,14 @@ h1 {
     <div class="section-title">01 — KEY SPECIFICATIONS</div>
     <div class="spec-grid">
       <div class="spec-card">
-        <div class="spec-label">RATED THRUST</div>
-        <div class="spec-val">5,000 N</div>
-        <div class="spec-note">Safety factor 3× → structure holds 15,000 N</div>
+        <div class="spec-label">ASPERA NOMINAL THRUST</div>
+        <div class="spec-val">~650 N</div>
+        <div class="spec-note">Calculated from 7 km mission, 11 kg liftoff mass, TWR=6</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">DESIGN LOAD (3× SF)</div>
+        <div class="spec-val">1,950 N</div>
+        <div class="spec-note">Structure sized to this. MS angle utilisation: 5.5%</div>
       </div>
       <div class="spec-card">
         <div class="spec-label">ORIENTATION</div>
@@ -304,12 +309,12 @@ h1 {
       <div class="spec-card">
         <div class="spec-label">FRAME MATERIAL</div>
         <div class="spec-val">MS ANGLE</div>
-        <div class="spec-note">50×50×5 mm mild steel angle. Local welder.</div>
+        <div class="spec-note">40×40×4 mm mild steel angle. Local welder.</div>
       </div>
       <div class="spec-card">
         <div class="spec-label">LOAD CELL</div>
-        <div class="spec-val">0–5,000 N</div>
-        <div class="spec-note">S-type. Inline with thrust axis. ±0.05% FSO</div>
+        <div class="spec-val">0–1,000 N</div>
+        <div class="spec-note">S-type. Inline with thrust axis. Sized to actual thrust.</div>
       </div>
       <div class="spec-card">
         <div class="spec-label">SAFE DISTANCE</div>
@@ -323,8 +328,8 @@ h1 {
       </div>
       <div class="spec-card" style="border-left-color:var(--green)">
         <div class="spec-label">ESTIMATED COST</div>
-        <div class="spec-val" style="color:var(--green)">₹6,500–9,500</div>
-        <div class="spec-note">Frame + load cell + DAQ + fittings</div>
+        <div class="spec-val" style="color:var(--green)">₹3,980–6,130</div>
+        <div class="spec-note">Calculated from first principles. Clamp collars: get local quote.</div>
       </div>
     </div>
   </div>
@@ -502,67 +507,75 @@ h1 {
       <tbody>
         <tr>
           <td class="part-id">S-01</td>
-          <td>MS Angle Iron</td>
-          <td>50×50×5 mm, 3m lengths</td>
-          <td>4 lengths</td>
+          <td>MS Angle Iron 40×40×4</td>
+          <td>2m total. Stress utilisation 5.5% at design load.</td>
+          <td>1 length</td>
           <td class="source">Local steel yard</td>
-          <td class="cost">₹1,200</td>
+          <td class="cost">₹180–220</td>
         </tr>
         <tr>
           <td class="part-id">S-02</td>
           <td>MS Flat Plate (reaction wall)</td>
-          <td>200×200×10 mm</td>
+          <td>150×150×6 mm. Adequate at 1,950 N design load.</td>
           <td>1</td>
           <td class="source">Local steel yard</td>
-          <td class="cost">₹350</td>
+          <td class="cost">₹120–160</td>
         </tr>
         <tr>
           <td class="part-id">S-03</td>
-          <td>MS Flat Plate (upright)</td>
-          <td>150×200×8 mm</td>
+          <td>MS Flat Plate (uprights)</td>
+          <td>100×150×6 mm. Carries radial loads only (~20 N).</td>
           <td>2</td>
           <td class="source">Local steel yard</td>
-          <td class="cost">₹400</td>
+          <td class="cost">₹180–220</td>
         </tr>
         <tr>
           <td class="part-id">S-04</td>
-          <td>Clamp Collar — 50 mm bore</td>
-          <td>Split clamp, 4-bolt, MS</td>
-          <td>2</td>
-          <td class="source">Robu.in / local lathe</td>
-          <td class="cost">₹400</td>
+          <td>MS Rod — load cell boss</td>
+          <td>M12 × 60 mm, grade 8.8. Utilisation 3.6% at design load.</td>
+          <td>1</td>
+          <td class="source">Hardware store</td>
+          <td class="cost">₹40–60</td>
         </tr>
         <tr>
           <td class="part-id">S-05</td>
-          <td>Clamp Collar — 75 mm bore</td>
-          <td>Split clamp, 4-bolt, MS</td>
-          <td>2</td>
-          <td class="source">Robu.in / local lathe</td>
-          <td class="cost">₹500</td>
+          <td>Bolts + nuts M8/M10</td>
+          <td>Assorted for uprights and clamp collars</td>
+          <td>1 set</td>
+          <td class="source">Hardware store</td>
+          <td class="cost">₹80–120</td>
         </tr>
         <tr>
           <td class="part-id">S-06</td>
-          <td>Anchor bolts + nuts</td>
-          <td>M12 × 100 mm, grade 8.8</td>
-          <td>8</td>
-          <td class="source">Hardware store</td>
-          <td class="cost">₹160</td>
+          <td>Welding labour</td>
+          <td>Frame + reaction wall + uprights. One session.</td>
+          <td>1 job</td>
+          <td class="source">Local welder</td>
+          <td class="cost">₹400–600</td>
         </tr>
         <tr>
           <td class="part-id">S-07</td>
-          <td>Welding (labour)</td>
-          <td>Frame + uprights + wall</td>
-          <td>1 job</td>
-          <td class="source">Local welder</td>
-          <td class="cost">₹800–1,200</td>
+          <td>Split clamp collar — 50 mm bore</td>
+          <td>4-bolt, MS. Radial load only. Get quote from local lathe shop.</td>
+          <td>1</td>
+          <td class="source">Local machine shop ⚠ get quote</td>
+          <td class="cost">₹200–350</td>
+        </tr>
+        <tr>
+          <td class="part-id">S-08</td>
+          <td>Split clamp collar — 75 mm bore</td>
+          <td>4-bolt, MS. Same note as above.</td>
+          <td>1</td>
+          <td class="source">Local machine shop ⚠ get quote</td>
+          <td class="cost">₹250–400</td>
         </tr>
         <tr>
           <td class="part-id">D-01</td>
           <td>S-type Load Cell</td>
-          <td>0–5,000 N (500 kg), ±0.05% FSO</td>
+          <td>0–1,000 N. Sized to actual Aspera thrust with margin.</td>
           <td>1</td>
           <td class="source">Robu.in / IndiaMART</td>
-          <td class="cost">₹1,200–1,800</td>
+          <td class="cost">₹450–700</td>
         </tr>
         <tr>
           <td class="part-id">D-02</td>
@@ -570,63 +583,79 @@ h1 {
           <td>24-bit ADC module</td>
           <td>1</td>
           <td class="source">Robu.in</td>
-          <td class="cost">₹120</td>
+          <td class="cost">₹80–120</td>
         </tr>
         <tr>
           <td class="part-id">D-03</td>
-          <td>Arduino Uno / Mega</td>
-          <td>Data acquisition + logging</td>
+          <td>Arduino Uno</td>
+          <td>DAQ + solenoid valve control</td>
           <td>1</td>
           <td class="source">Robu.in</td>
-          <td class="cost">₹450–600</td>
+          <td class="cost">₹350–500</td>
         </tr>
         <tr>
           <td class="part-id">D-04</td>
-          <td>Pressure transducer</td>
-          <td>0–50 bar, 1/8" NPT, analog out</td>
+          <td>SD card logging module</td>
+          <td>SPI interface</td>
           <td>1</td>
-          <td class="source">IndiaMART</td>
-          <td class="cost">₹600–900</td>
+          <td class="source">Robu.in</td>
+          <td class="cost">₹60–80</td>
         </tr>
         <tr>
           <td class="part-id">D-05</td>
-          <td>SD card logging module</td>
-          <td>SPI interface for Arduino</td>
-          <td>1</td>
+          <td>Jumper wires + USB cable 5m</td>
+          <td>Basic interconnects</td>
+          <td>1 set</td>
           <td class="source">Robu.in</td>
-          <td class="cost">₹80</td>
-        </tr>
-        <tr>
-          <td class="part-id">D-06</td>
-          <td>Long USB cable / wireless module</td>
-          <td>10m USB or HC-12 433MHz pair</td>
-          <td>1</td>
-          <td class="source">Robu.in</td>
-          <td class="cost">₹200–350</td>
+          <td class="cost">₹80–120</td>
         </tr>
         <tr>
           <td class="part-id">H-01</td>
-          <td>N₂O ball valve (remote)</td>
-          <td>1/4" SS, solenoid actuated 12V</td>
+          <td>Solenoid valve 12V NC</td>
+          <td>1/4" body, rated 0–50 bar minimum</td>
           <td>1</td>
           <td class="source">IndiaMART</td>
-          <td class="cost">₹800–1,200</td>
+          <td class="cost">₹500–800</td>
         </tr>
         <tr>
           <td class="part-id">H-02</td>
-          <td>Pressure fittings + tubing</td>
-          <td>1/4" SS Swagelok-type, 1m SS tube</td>
-          <td>1 set</td>
+          <td>SS tubing 1/4" × 1m</td>
+          <td>High pressure N₂O feed line</td>
+          <td>1</td>
           <td class="source">Industrial supplier</td>
-          <td class="cost">₹600–900</td>
+          <td class="cost">₹200–350</td>
         </tr>
         <tr>
           <td class="part-id">H-03</td>
+          <td>Compression fittings 1/4" SS</td>
+          <td>Rated 100 bar minimum. 4 fittings.</td>
+          <td>4</td>
+          <td class="source">Industrial supplier</td>
+          <td class="cost">₹300–500</td>
+        </tr>
+        <tr>
+          <td class="part-id">H-04</td>
           <td>Pressure relief valve</td>
-          <td>Set at 60 bar, 1/4" NPT</td>
+          <td>Set 60 bar, 1/4" NPT</td>
           <td>1</td>
           <td class="source">IndiaMART</td>
-          <td class="cost">₹400–600</td>
+          <td class="cost">₹300–500</td>
+        </tr>
+        <tr>
+          <td class="part-id">H-05</td>
+          <td>Relay module 12V</td>
+          <td>Arduino-controlled solenoid driver</td>
+          <td>1</td>
+          <td class="source">Robu.in</td>
+          <td class="cost">₹60–80</td>
+        </tr>
+        <tr>
+          <td class="part-id">H-06</td>
+          <td>12V battery / power supply</td>
+          <td>For solenoid + Arduino during test</td>
+          <td>1</td>
+          <td class="source">Local electronics</td>
+          <td class="cost">₹150–250</td>
         </tr>
       </tbody>
     </table>
@@ -636,13 +665,15 @@ h1 {
   <div class="section">
     <div class="section-title">04 — COST SUMMARY</div>
     <div class="cost-summary">
-      <div class="cost-row"><span>Structure (steel + welding)</span><span class="cost">₹2,950–3,450</span></div>
-      <div class="cost-row"><span>Data acquisition (load cell + DAQ)</span><span class="cost">₹2,450–3,350</span></div>
-      <div class="cost-row"><span>Fluid system (valve + fittings + PRV)</span><span class="cost">₹1,800–2,700</span></div>
-      <div class="cost-row"><span>Miscellaneous (bolts, wire, connectors)</span><span class="cost">₹300–500</span></div>
+      <div class="cost-row"><span>Structure (steel + welding)</span><span class="cost">₹1,000–1,380</span></div>
+      <div class="cost-row"><span>Clamp collars (local machine shop — get quote)</span><span class="cost">₹450–750</span></div>
+      <div class="cost-row"><span>Data acquisition (load cell + DAQ)</span><span class="cost">₹1,020–1,520</span></div>
+      <div class="cost-row"><span>Fluid system (solenoid + fittings + PRV)</span><span class="cost">₹1,300–2,000</span></div>
+      <div class="cost-row"><span>Miscellaneous (bolts, wire, relay, battery)</span><span class="cost">₹210–330</span></div>
+      <div class="cost-row" style="font-size:11px;color:var(--dim)"><span>N₂O cylinder deposit (separate — refundable)</span><span>₹2,000–3,000</span></div>
       <div class="cost-total">
-        <span>TOTAL ESTIMATED BUILD COST</span>
-        <span>₹7,500–10,000</span>
+        <span>TOTAL BUILD COST (excl. N₂O deposit)</span>
+        <span>₹3,980–6,130</span>
       </div>
     </div>
   </div>
