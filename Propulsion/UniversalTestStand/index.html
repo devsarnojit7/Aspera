@@ -880,14 +880,14 @@ h1 {
         <div class="step-num">01</div>
         <div class="step-content">
           <div class="step-title">Cut and weld the base frame</div>
-          <div class="step-body">Cut 50×50×5 MS angle into: 2× 800mm rails, 4× 300mm crossmembers. Weld into a flat rectangular ladder frame. Weld <strong>anchor foot plates</strong> (100×100×8mm) at all four corners. Drill M12 anchor holes through each foot. This is the only welding job — take the cut list to your local welder.</div>
+          <div class="step-body">Cut 40×40×4 MS angle into: 2× 800mm rails, 4× 300mm crossmembers. Weld into a flat rectangular ladder frame. Weld <strong>anchor foot plates</strong> (100×100×8mm) at all four corners. Drill M12 anchor holes through each foot. This is the only welding job — take the cut list to your local welder.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-content">
           <div class="step-title">Weld the reaction wall</div>
-          <div class="step-body">Weld the 200×200×10mm plate vertically at the <strong>nose end</strong> of the frame, centred on the thrust axis. This wall takes the full 5,000 N reaction force through the load cell. Weld a <strong>load cell mounting boss</strong> (M16 threaded rod, 30mm long) centred on the wall face.</div>
+          <div class="step-body">Weld the 150×150×6mm plate vertically at the <strong>nose end</strong> of the frame, centred on the thrust axis. This wall takes the 1,950 N design load through the load cell. Weld a <strong>load cell mounting boss</strong> (M16 threaded rod, 30mm long) centred on the wall face.</div>
           <div class="step-warn">⚠ This weld is the most structurally critical. Full penetration weld, both sides. No tack welds.</div>
         </div>
       </div>
@@ -895,28 +895,28 @@ h1 {
         <div class="step-num">03</div>
         <div class="step-content">
           <div class="step-title">Install the load cell inline</div>
-          <div class="step-body">Thread the S-type load cell onto the reaction wall boss. Thread a <strong>motor thrust plate</strong> (50×50×8mm, M16 hole) onto the other end of the load cell. The thrust force path is: motor nose → thrust plate → load cell → reaction wall → ground. The load cell reads thrust directly.</div>
+          <div class="step-body">Thread the S-type 0-1,000 N load cell onto the reaction wall boss. Thread a <strong>motor thrust plate</strong> (50×50×8mm, M12 hole) onto the other end of the load cell. The thrust force path is: motor nose → thrust plate → load cell → reaction wall → ground. The load cell reads thrust directly.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div class="step-content">
           <div class="step-title">Weld motor support uprights</div>
-          <div class="step-body">Weld two upright plates (150×200×8mm) vertically onto the base rails, spaced to match your motor length. Drill <strong>four M8 holes</strong> in each upright to accept the clamp collar bolts. These uprights carry the radial loads only — they do not carry thrust.</div>
+          <div class="step-body">Weld two upright plates (100×150×6mm) vertically onto the base rails, spaced to match your motor length. Drill <strong>four M8 holes</strong> in each upright to accept the clamp collar bolts. These uprights carry the radial loads only — they do not carry thrust.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">05</div>
         <div class="step-content">
-          <div class="step-title">Install interchangeable clamp collars</div>
-          <div class="step-body">Bolt the <strong>50mm clamp collar</strong> onto the uprights for first test campaign. When switching to 75mm motors, unbolt and swap collars in under 5 minutes. The collar grips the motor body radially — it does not restrain the motor axially. The motor nose pushes against the thrust plate and the load cell reads that force.</div>
+          <div class="step-title">Install motor support</div>
+          <div class="step-body"> For <strong>solid motor testing:</strong> bolt U-bolts or mild steel straps around the motor tube onto the uprights. Simple, cheap, adequate. For <strong>hybrid motor testing:</strong> bolt the <strong>50mm clamp collar</strong> onto the uprights for the first test campaign. When switching to 75mm motors, unbolt and swap collars in under 5 minutes. In both cases, the collar grips the motor body radially only — the motor nose pushes against the thrust plate, and the load cell reads that force.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">06</div>
         <div class="step-content">
           <div class="step-title">Wire the DAQ system</div>
-          <div class="step-body">Connect load cell → HX711 → Arduino digital pins. Connect pressure transducer analog output → Arduino A0. Wire SD card module via SPI. Upload the logging sketch (100 Hz loop, CSV output). Run a <strong>10m USB cable</strong> or HC-12 wireless pair to the laptop behind the berm. Test with known weights before first fire.</div>
+          <div class="step-body">Connect load cell → HX711 → Arduino digital pins. Connect pressure transducer analog output → Arduino A0. Wire the SD card module via SPI. Upload the logging sketch (100 Hz loop, CSV output). Run a <strong>10m USB cable</strong> or HC-12 wireless pair to the laptop behind the berm. Test with known weights before first fire.</div>
         </div>
       </div>
       <div class="step">
@@ -924,14 +924,14 @@ h1 {
         <div class="step-content">
           <div class="step-title">Install fluid system (hybrid only)</div>
           <div class="step-body">Route SS tubing from N₂O cylinder → solenoid valve → injector port on motor. Install <strong>pressure relief valve</strong> between cylinder and solenoid, set to 60 bar. The solenoid valve is controlled by a relay on the Arduino — this is your remote oxidiser control. Never open the N₂O cylinder manually during a fire.</div>
-          <div class="step-warn">⚠ All fittings rated to minimum 100 bar. No plastic or rubber push-fit fittings in the high-pressure line.</div>
+          <div class="step-warn">⚠ All fittings rated to a minimum 100 bar. No plastic or rubber push-fit fittings in the high-pressure line.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">08</div>
         <div class="step-content">
           <div class="step-title">Anchor, verify, cold-flow test</div>
-          <div class="step-body">Anchor the stand to ground with M12 bolts or sandbag weights. Before any hot fire, do a <strong>cold-flow test</strong> — open the N₂O valve with no ignition and verify flow, check for leaks at every fitting, confirm the pressure trace logs correctly. Only after a clean cold-flow test do you proceed to a hot fire.</div>
+          <div class="step-body">Anchor the stand to ground with M12 bolts or sandbag weights. Before any hot fire, do a <strong>cold-flow test</strong> — open the N₂O valve with no ignition and verify flow, check for leaks at every fitting, and confirm the pressure trace logs correctly. Only after a clean cold-flow test do you proceed to a hot fire.</div>
         </div>
       </div>
     </div>
@@ -942,11 +942,11 @@ h1 {
     <div class="section-title">07 — SAFETY RULES</div>
     <div class="safety-box">
       <div class="safety-rule">Minimum 30 metres between operator and stand during any hot or cold-flow test. No exceptions.</div>
-      <div class="safety-rule">All ignition and valve commands via remote control only. Nobody approaches the stand until N₂O cylinder is fully closed and 5 minutes have elapsed.</div>
+      <div class="safety-rule">All ignition and valve commands via remote control only. Nobody approaches the stand until the N₂O cylinder is fully closed and 5 minutes have elapsed.</div>
       <div class="safety-rule">Pressure relief valve must be installed and tested before every session. Never defeat or bypass it.</div>
       <div class="safety-rule">Fire extinguisher (CO₂ type, minimum 2 kg) positioned 15m downrange, accessible from the operator position.</div>
-      <div class="safety-rule">All personnel wear safety glasses. At least one person designated as safety officer per session — their call is final.</div>
-      <div class="safety-rule">Natural earthen berm or concrete block between operator and stand whenever possible. Stand oriented so exhaust fires away from operator and any structures.</div>
+      <div class="safety-rule">All personnel wear safety glasses. At least one person is designated as the safety officer per session — their call is final.</div>
+      <div class="safety-rule">Natural earthen berm or concrete block between operator and stand whenever possible. Stand oriented so exhaust fires away from the operator and any structures.</div>
       <div class="safety-rule">No test fire without at least two people present. No solo testing. Ever.</div>
       <div class="safety-rule">Post-fire inspection before approaching stand: confirm N₂O cylinder valve closed, wait 5 minutes, approach from the side — never from nozzle or nose direction.</div>
     </div>
